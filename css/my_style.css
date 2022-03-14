@@ -116,7 +116,7 @@ header nav ul li a.active {
 
 .banner-sec .swiper-pagination-bullet-active {
     background: #ce3745;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
 }
 
 .cardio-sec {
