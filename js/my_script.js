@@ -7,6 +7,15 @@ wow = new WOW({
 });
 wow.init();
 
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+        $("header").addClass("fixed").fadeIn(1000);
+    } else {
+        $("header").removeClass("fixed").fadeOut(1000);
+    }
+});
+
+
 $("nav ul li a#home").click(function() {
     $("nav ul li a").removeClass("active");
     $(this).addClass("active");
@@ -44,6 +53,14 @@ if (screen.width < 767) {
         // $("hamburger").toggleClass('toggle');
     });
 }
+
+
+$('.btn a').click(function() {
+    $('.fix').fadeIn(500);
+});
+$('.fix .cls i').click(function() {
+    $('.fix').fadeOut(500);
+});
 
 
 // hamburger

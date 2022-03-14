@@ -42,14 +42,17 @@ section {
     overflow: hidden;
 }
 
+header.fixed {
+    background-color: #242424cc;
+    position: fixed;
+    z-index: 11;
+}
+
 header {
     width: 100%;
-    overflow: hidden;
+    height: 97px;
     padding: 7px 0;
-    background-color: #252525;
-    position: fixed;
-    top: 0;
-    left: 0;
+    background: 0;
     z-index: 999;
 }
 
@@ -99,14 +102,20 @@ header nav ul li a.active {
     color: #ce3745;
 }
 
+
+/* .head-space {
+    height: 97px;
+} */
+
 .banner-sec {
-    margin-top: 60px;
+    height: calc(100% - 100px);
     margin-bottom: -4px;
 }
 
-.banner-sec img {
+
+/* .banner-sec img {
     height: 88vh;
-}
+} */
 
 .banner-sec .swiper-pagination-bullet {
     width: 10px;
@@ -135,7 +144,7 @@ header nav ul li a.active {
 }
 
 .cardio-sec ul.row li figure {
-    width: 100px;
+    width: 70px;
     margin: auto;
 }
 
@@ -186,6 +195,40 @@ header nav ul li a.active {
     color: #fff;
     padding-top: 40px;
     text-align: justify;
+    line-height: 22px;
+}
+
+.video-sec {
+    background: url(../images/video.jpg) no-repeat;
+    background-position: center;
+    background-size: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.video-sec .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #20222480;
+}
+
+.video-sec .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.video-sec .btn a i {
+    font-size: 80px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    color: #ce3745;
+    border: 1px solid #ce3745;
 }
 
 
