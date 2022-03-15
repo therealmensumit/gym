@@ -9,9 +9,9 @@ wow.init();
 
 $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
-        $("header").addClass("fixed").fadeIn(1000);
+        $("header").addClass("fixed");
     } else {
-        $("header").removeClass("fixed").fadeOut(1000);
+        $("header").removeClass("fixed");
     }
 });
 

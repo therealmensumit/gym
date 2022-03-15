@@ -45,7 +45,18 @@ section {
 header.fixed {
     background-color: #242424cc;
     position: fixed;
+    height: 70px;
+    top: 0;
+    left: 0;
     z-index: 11;
+}
+
+header.fixed .logo {
+    width: 140px;
+}
+
+header.fixed nav ul {
+    padding-top: 14px;
 }
 
 header {
@@ -53,11 +64,14 @@ header {
     height: 97px;
     padding: 7px 0;
     background: 0;
+    position: fixed;
+    transition: 1s;
     z-index: 999;
 }
 
 header .logo {
     width: 200px;
+    transition: 1s;
     float: left;
 }
 
@@ -79,6 +93,7 @@ header nav {
 
 header nav ul {
     padding-top: 30px;
+    transition: 1s;
 }
 
 header nav ul li {
@@ -231,6 +246,88 @@ header nav ul li a.active {
     border: 1px solid #ce3745;
 }
 
+.trainer-sec {
+    padding: 100px 0;
+    background-color: #1c1c1c;
+}
+
+.trainer-sec .head {
+    text-align: center;
+    color: #fff;
+    font-size: 34px;
+    font-family: 'Roboto';
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.trainer-sec .head::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 170px;
+    height: 2px;
+    background-color: #ce3745;
+}
+
+.trainer-sec ul.trainee {
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.trainer-sec ul.trainee li {
+    width: 23%;
+    margin: 1%;
+    overflow: hidden;
+    position: relative;
+}
+
+.trainer-sec ul.trainee li:hover .info {
+    bottom: 0;
+    visibility: visible;
+}
+
+.trainer-sec ul.trainee li .info {
+    position: absolute;
+    bottom: -190px;
+    width: 100%;
+    height: 50%;
+    padding: 40px;
+    text-align: center;
+    background-color: #ce3745;
+    font-family: 'roboto';
+    transition: 1s;
+    visibility: hidden;
+}
+
+.trainer-sec ul.trainee li .info h3 {
+    color: #fff;
+    font-size: 22px;
+}
+
+.trainer-sec ul.trainee li .info p {
+    padding: 5px 0 15px;
+    color: #272727;
+}
+
+.trainer-sec ul.trainee li .info button {
+    width: 145px;
+    height: 40px;
+    border: 1px solid #fff;
+    color: #ce3745;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.trainer-sec ul.trainee li .info button:hover {
+    border-color: #fff;
+    background-color: #ce3745;
+    color: #fff;
+}
+
 
 /* Responsive mobile */
 
@@ -250,7 +347,7 @@ header nav ul li a.active {
     header nav ul {
         display: none;
         position: fixed;
-        top: 60px;
+        top: 0;
         left: 0;
         width: 0;
         height: 100vh;
@@ -305,6 +402,30 @@ header nav ul li a.active {
     .why-sec .why-main .para {
         font-size: 14px;
         padding-top: 30px;
+    }
+    .video-sec {
+        height: 230px;
+    }
+    .video-sec .btn a i {
+        font-size: 50px;
+        width: 50px;
+        height: 50px;
+    }
+    .trainer-sec {
+        padding: 50px 0;
+    }
+    .trainer-sec .head {
+        font-size: 24px;
+    }
+    .trainer-sec .head::after {
+        width: 140px;
+    }
+    .trainer-sec ul.trainee {
+        padding-top: 30px;
+    }
+    .trainer-sec ul.trainee li {
+        width: 100%;
+        margin-bottom: 10px;
     }
 }
 
