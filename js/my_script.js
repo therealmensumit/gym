@@ -19,10 +19,10 @@ $(window).scroll(function() {
 $(".fa-play-circle").grtyoutube({
     autoPlay: true
 });
-/* $(".count").counterUp({
-    delay: 10,
-    time: 2000
-}); */
+// $(".count").counterUp({
+//     delay: 10,
+//     time: 2000
+// });
 
 $("nav ul li a#home").click(function() {
     $("nav ul li a").removeClass("active");
@@ -84,6 +84,19 @@ var swiper = new Swiper(".mySwiper", {
     freeMode: false,
     loop: true,
     speed: 1400,
+    autoplay: true,
+    delay: 4000,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+
+var swiper = new Swiper(".testimonial", {
+    slidesPerView: 1,
+    freeMode: false,
+    loop: true,
+    speed: 1000,
     autoplay: true,
     delay: 4000,
     pagination: {

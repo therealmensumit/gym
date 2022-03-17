@@ -390,6 +390,53 @@ header nav ul li a.active {
     background-color: #ce3745;
 }
 
+.testi-sec .testi-main .testimonial {
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.testi-sec .testi-main .testimonial .test {
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    padding-top: 50px;
+}
+
+.testi-sec .testi-main .testimonial .test figure {
+    width: 600px;
+}
+
+.testi-sec .testi-main .testimonial .test figure img {
+    border-radius: 50%;
+}
+
+.testi-sec .testi-main .testimonial .test .content {
+    color: #fff;
+    font-family: 'Roboto';
+    padding-left: 50px;
+}
+
+.testi-sec .testi-main .testimonial .test .content p {
+    line-height: 24px;
+}
+
+.testi-sec .testi-main .testimonial .test .content h4 {
+    color: #ce3745;
+    padding-top: 20px;
+    font-size: 24px;
+}
+
+.testimonial .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+}
+
+.testimonial .swiper-pagination-bullet-active {
+    background: #ce3745;
+    border: 3px solid #fff;
+}
+
 
 /* youtube popup */
 
@@ -554,6 +601,28 @@ header nav ul li a.active {
     .counter-sec .main ul.list li .counter,
     .counter-sec .main ul.list li .word {
         font-size: 20px;
+    }
+    .testi-sec {
+        padding: 50px 0;
+    }
+    .testi-sec .testi-main .head {
+        font-size: 22px;
+    }
+    .testi-sec .testi-main .testimonial .test {
+        flex-wrap: wrap;
+        padding: 0;
+        text-align: justify;
+    }
+    .testi-sec .testi-main .testimonial .test figure {
+        width: auto;
+        margin: auto;
+        padding: 40px 0 15px;
+    }
+    .testi-sec .testi-main .testimonial .test .content {
+        padding: 0 12px;
+    }
+    .testi-sec .testi-main .testimonial .test .content h4 {
+        text-align: center;
     }
 }
 
