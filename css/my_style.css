@@ -519,8 +519,27 @@ header nav ul li a.active {
     color: #ce3745;
 }
 
+.top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    border-radius: 50%;
+    transition: .4s;
+    background-color: #434343;
+}
+
+.top:hover {
+    opacity: .6;
+}
+
+.top i {
+    color: #FFF;
+    padding: 10px;
+    font-size: 18px;
+}
+
 footer {
-    padding-top: 100px;
+    padding-top: 80px;
     background-color: #171717;
 }
 
@@ -538,12 +557,67 @@ footer .main .foot {
     font-size: 14px;
 }
 
+footer .main .foot .head {
+    color: #ce3745;
+    padding-bottom: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+footer .main .foot .head::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background-color: #fff;
+}
+
 footer .main .foot .flogo {
     width: 120px;
 }
 
 footer .main .foot .para {
     margin: 20px 0;
+}
+
+footer .main .foot .para .nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .main .foot .para .nav a {
+    color: #fff;
+    font-size: 14px;
+    width: 50%;
+    transition: .4s;
+    display: block;
+    padding: 7px 0;
+    text-transform: uppercase;
+}
+
+footer .main .foot .para a:hover {
+    color: #ce3745;
+}
+
+footer .main .foot .para .add {
+    display: flex;
+    padding: 10px 0;
+}
+
+footer .main .foot .para .add i {
+    color: #ce3745;
+}
+
+footer .main .foot .para .add p {
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+footer .main .foot .para .add p a {
+    color: #fff;
 }
 
 footer .main .foot .soc-icon {
@@ -563,11 +637,18 @@ footer .main .foot .soc-icon .sc i {
     padding: 10px;
     font-size: 14px;
     border-radius: 50%;
+    transition: 1s;
     color: #fff;
+}
+
+footer .main .foot .soc-icon .sc i:hover {
+    transform: rotate(360deg);
 }
 
 footer .copyr {
     text-align: center;
+    background: #131313;
+    margin-top: 280px;
     padding: 30px;
 }
 
