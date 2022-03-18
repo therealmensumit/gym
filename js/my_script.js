@@ -21,12 +21,12 @@ $(".fa-play-circle").grtyoutube({
 });
 
 
-function innernavscroll() {
-    if ($(document).scrollTop() > $(".gallery").offset().top - 50) {
-        $("nav ul li a").removeClass("active");
-        $("nav ul li a#gallery").addClass("active");
-    }
-}
+// function innernavscroll() {
+//     if ($(document).scrollTop() > $(".gallery").offset().top - 50) {
+//         $("nav ul li a").removeClass("active");
+//         $("nav ul li a#gallery").addClass("active");
+//     }
+// }
 $("nav ul li a#home").click(function() {
     $("nav ul li a").removeClass("active");
     $(this).addClass("active");
@@ -78,7 +78,6 @@ $('.fix .cls i').click(function() {
 $('.hamburger').click(function() {
     $(this).toggleClass('toggle');
     $('header nav ul').toggle();
-    $('header nav ul').css('width', '100%');
 });
 
 
