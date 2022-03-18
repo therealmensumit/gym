@@ -519,12 +519,19 @@ header nav ul li a.active {
     color: #ce3745;
 }
 
-.top {
+.top.affix {
     position: fixed;
+    z-index: 2;
+    visibility: visible;
+}
+
+.top {
+    position: absolute;
     bottom: 40px;
     right: 40px;
     border-radius: 50%;
     transition: .4s;
+    visibility: hidden;
     background-color: #434343;
 }
 
@@ -618,6 +625,11 @@ footer .main .foot .para .add p {
 
 footer .main .foot .para .add p a {
     color: #fff;
+    transition: .4s;
+}
+
+footer .main .foot .para .add p a:hover {
+    color: #ce3745;
 }
 
 footer .main .foot .soc-icon {
@@ -724,6 +736,9 @@ footer .copyr h5 span {
     }
     .banner-sec img {
         height: auto;
+    }
+    header {
+        height: 65px;
     }
     header .logo {
         width: 120px;

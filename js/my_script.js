@@ -1,16 +1,9 @@
-wow = new WOW({
-    animateClass: 'animated',
-    offset: 100,
-    callback: function(box) {
-        console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
-    }
-});
-wow.init();
-
 $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
+    if ($(this).scrollTop() > 200) {
+        $('.top').addClass('affix');
         $("header").addClass("fixed");
     } else {
+        $('.top').removeClass('affix');
         $("header").removeClass("fixed");
     }
 });
@@ -67,10 +60,10 @@ if (screen.width < 767) {
 
 
 $('.btn a').click(function() {
-    $('.fix').fadeIn(500);
+    $('.fix').fadeIn(1000);
 });
 $('.fix .cls i').click(function() {
-    $('.fix').fadeOut(500);
+    $('.fix').fadeOut(1000);
 });
 
 
@@ -106,3 +99,13 @@ var swiper = new Swiper(".testimonial", {
         clickable: true,
     },
 });
+
+
+wow = new WOW({
+    animateClass: 'animated',
+    offset: 100,
+    callback: function(box) {
+        console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+    }
+});
+wow.init();
