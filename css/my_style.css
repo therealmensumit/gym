@@ -27,13 +27,29 @@ img {
     border: 1px solid #fff;
     color: #ce3745;
     cursor: pointer;
+    z-index: 0;
+    position: relative;
     transition: .4s;
 }
 
 .btn:hover {
-    border-color: #fff;
-    background-color: #ce3745;
     color: #fff;
+}
+
+.btn::before {
+    position: absolute;
+    content: '';
+    transition: .4s;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: -1;
+    background-color: #ce3745;
+}
+
+.btn:hover::before {
+    height: 100%;
 }
 
 .container {
@@ -42,7 +58,7 @@ img {
 }
 
 ::-webkit-scrollbar {
-    width: 3px;
+    width: 2px;
 }
 
  ::-webkit-scrollbar-track {
@@ -350,12 +366,12 @@ header nav ul li a.active {
     margin: auto;
 }
 
-.counter-sec .main ul.list li .counter {
+.counter-sec .main ul.list li .cout {
     padding: 15px 0;
     font-weight: 300;
 }
 
-.counter-sec .main ul.list li .counter,
+.counter-sec .main ul.list li .cout,
 .counter-sec .main ul.list li .word {
     text-align: center;
     color: #fff;
@@ -435,6 +451,135 @@ header nav ul li a.active {
 .testimonial .swiper-pagination-bullet-active {
     background: #ce3745;
     border: 3px solid #fff;
+}
+
+.gallery ul.fance {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery ul.fance li {
+    position: relative;
+    width: 25%;
+}
+
+.gallery ul.fance li:hover .ico {
+    opacity: 1;
+    visibility: visible;
+}
+
+.gallery ul.fance li figure {
+    margin-bottom: -4px;
+    overflow: hidden;
+}
+
+.gallery ul.fance li figure img {
+    transition: .4s;
+}
+
+.gallery ul.fance li:hover figure img {
+    transform: scale(1.2);
+}
+
+.gallery ul.fance li .ico {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .4s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.gallery ul.fance li:hover .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00000078;
+}
+
+.gallery ul.fance li .ico i {
+    color: #fff;
+    border: 1px solid #ce3745;
+    background-color: #ce3745;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: .4s;
+    opacity: .8;
+    cursor: pointer;
+}
+
+.gallery ul.fance li .ico i:hover {
+    background-color: transparent;
+    color: #ce3745;
+}
+
+footer {
+    padding-top: 100px;
+    background-color: #171717;
+}
+
+footer .main {
+    float: left;
+    width: 100%;
+}
+
+footer .main .foot {
+    width: 31.33%;
+    float: left;
+    padding: 10px;
+    color: #fff;
+    font-family: 'Roboto';
+    font-size: 14px;
+}
+
+footer .main .foot .flogo {
+    width: 120px;
+}
+
+footer .main .foot .para {
+    margin: 20px 0;
+}
+
+footer .main .foot .soc-icon {
+    display: flex;
+}
+
+footer .main .foot .soc-icon .sc {
+    margin: 0 10px;
+}
+
+footer .main .foot .soc-icon .sc.fb {
+    margin-left: 0;
+}
+
+footer .main .foot .soc-icon .sc i {
+    background-color: #434343;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 50%;
+    color: #fff;
+}
+
+footer .copyr {
+    text-align: center;
+    padding: 30px;
+}
+
+footer .copyr h5 {
+    color: #fff;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 400;
+}
+
+footer .copyr h5 span {
+    color: #ce3745;
 }
 
 
@@ -598,7 +743,7 @@ header nav ul li a.active {
     .counter-sec .main ul.list li figure {
         width: 70px;
     }
-    .counter-sec .main ul.list li .counter,
+    .counter-sec .main ul.list li .cout,
     .counter-sec .main ul.list li .word {
         font-size: 20px;
     }
@@ -623,6 +768,13 @@ header nav ul li a.active {
     }
     .testi-sec .testi-main .testimonial .test .content h4 {
         text-align: center;
+    }
+    .gallery ul.fance li {
+        width: 50%;
+    }
+    .gallery ul.fance li .ico i {
+        font-size: 14px;
+        padding: 10px;
     }
 }
 

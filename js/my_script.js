@@ -19,11 +19,14 @@ $(window).scroll(function() {
 $(".fa-play-circle").grtyoutube({
     autoPlay: true
 });
-// $(".count").counterUp({
-//     delay: 10,
-//     time: 2000
-// });
 
+
+function innernavscroll() {
+    if ($(document).scrollTop() > $(".gallery").offset().top - 50) {
+        $("nav ul li a").removeClass("active");
+        $("nav ul li a#gallery").addClass("active");
+    }
+}
 $("nav ul li a#home").click(function() {
     $("nav ul li a").removeClass("active");
     $(this).addClass("active");
