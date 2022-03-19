@@ -165,14 +165,14 @@ header nav ul li a.active {
 } */
 
 .banner-sec .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     background: #fff;
 }
 
 .banner-sec .swiper-pagination-bullet-active {
     background: #ce3745;
-    border: 2px solid #fff;
+    border: 3px solid #fff;
 }
 
 .cardio-sec {
