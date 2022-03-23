@@ -159,10 +159,9 @@ header nav ul li a.active {
     margin-bottom: -4px;
 }
 
-
-/* .banner-sec img {
-    height: 88vh;
-} */
+.banner-sec img.mob {
+    display: none;
+}
 
 .banner-sec .swiper-pagination-bullet {
     width: 15px;
@@ -775,6 +774,12 @@ footer .copyr h5 span {
     }
     .banner-sec {
         margin-bottom: -4px;
+    }
+    .banner-sec img.desk {
+        display: none;
+    }
+    .banner-sec img.mob {
+        display: block;
     }
     .cardio-sec {
         padding: 50px 0;
