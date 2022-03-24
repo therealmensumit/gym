@@ -62,7 +62,7 @@ img {
 }
 
  ::-webkit-scrollbar-track {
-    background: transparent;
+    background: 0;
 }
 
  ::-webkit-scrollbar-thumb {
@@ -518,6 +518,187 @@ header nav ul li a.active {
     color: #ce3745;
 }
 
+.get_in_touch {
+    padding: 50px 0;
+    background: #1c1c1c;
+    position: relative;
+    overflow: hidden;
+}
+
+.get_in_touch::before {
+    content: '';
+    position: absolute;
+    background: url(../images/bgcontact.jpg) no-repeat;
+    width: 100%;
+    height: 248px;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-size: 100% 70%;
+}
+
+.get_in_touch .head {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'roboto';
+    color: #fff;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.get_in_touch .head::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 2px;
+    background-color: #ce3745;
+}
+
+
+/* .get_in_touch h2 {
+    position: relative;
+    font-size: 70px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'tungsten';
+} */
+
+.get_in_touch .form_contact {
+    margin-top: 50px;
+}
+
+.get_in_touch h3 {
+    font-size: 40px;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    z-index: 0;
+    position: relative;
+    font-family: 'Khand', sans-serif;
+}
+
+.get_in_touch .form_contact h4 {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 26px;
+}
+
+.get_in_touch .form_contact .form_main {
+    width: 46%;
+    margin: 1% 2%;
+    float: left;
+}
+
+.form_main .iti {
+    width: 100%;
+    position: relative;
+}
+
+
+/* .form_contact .form_main .form_in input.phone {
+    padding-left: 50px;
+} */
+
+.get_in_touch .form_contact .form_main .form_in {
+    width: 100%;
+    position: relative;
+}
+
+.get_in_touch .form_contact .form_main .form_in .show-error-msg,
+.get_in_touch .form_contact .form_main .form_in .iti .show-error-msg {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    font-size: 12px;
+    color: red;
+}
+
+.get_in_touch .form_contact .form_main .form_in .iti .show-error-msg {
+    bottom: -15px;
+}
+
+.form_contact .form_main .form_in input,
+.form_contact .form_main .form_in textarea {
+    width: 100%;
+    background: #1c1c1c;
+    border: 1px solid #ce3745;
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 12px;
+    color: #fff;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.form_contact .form_main .form_in input:focus,
+.form_contact .form_main .form_in textarea:focus {
+    outline: none;
+    border: 2px solid #ce3745;
+}
+
+.form_contact .form_main .form_in input::placeholder,
+.form_contact .form_main .form_in textarea::placeholder {
+    color: #ce3745;
+    font-family: 'roboto';
+    font-size: 14px;
+}
+
+.form_contact .form_main .form_in textarea {
+    height: 190px;
+}
+
+.form_contact .form_main .form_in.left {
+    float: right;
+    text-align: right;
+}
+
+.butn-com {
+    position: relative;
+}
+
+.form_main .form_in.left .snd {
+    background: none;
+    border: 1px solid #ce3745;
+    color: #ce3745;
+    padding: 10px 25px;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-right: 0;
+    transition: 0.2s;
+    position: relative;
+    z-index: 0;
+}
+
+.form_main .form_in.left .snd:hover {
+    color: #fff;
+}
+
+.form_main .form_in.left .snd::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: #ce3745;
+    transform: scaleY(0);
+    transform-origin: 50% 100%;
+    transition: transform 0.3s ease-out;
+    /* transition-timing-function: ease-out; */
+}
+
+.form_main .form_in.left .snd:hover::after {
+    transform: scaleY(1);
+    /* transition-timing-function: cubic-bezier(.52, 1.64, .37, .66); */
+}
+
 .top.affix {
     position: fixed;
     z-index: 2;
@@ -876,6 +1057,16 @@ footer .copyr h5 span {
     .gallery ul.fance li .ico i {
         font-size: 14px;
         padding: 10px;
+    }
+    .get_in_touch .head {
+        font-size: 22px;
+    }
+    .get_in_touch .form_contact form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .get_in_touch .form_contact .form_main {
+        width: 100%;
     }
     .top {
         bottom: 20px;
