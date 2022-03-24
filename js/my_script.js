@@ -8,46 +8,68 @@ $(window).scroll(function() {
     }
 });
 
+function innernavscroll() {
+    if ($(document).scrollTop() > $('.banner-sec').offset().top - 50) {
+        $('.nav li a').removeClass('active');
+        $('.nav li a#home').addClass('active');
+    }
+    if ($(document).scrollTop() > $('.video-sec').offset().top - 50) {
+        $('.nav li a').removeClass('active');
+        $('.nav li a#classes').addClass('active');
+    }
+    if ($(document).scrollTop() > $('.trainer-sec').offset().top - 50) {
+        $('.nav li a').removeClass('active');
+        $('.nav li a#trainers').addClass('active');
+    }
+    if ($(document).scrollTop() > $('.counter-sec').offset().top - 50) {
+        $('.nav li a').removeClass('active');
+        $('.nav li a#services').addClass('active');
+    }
+    if ($(document).scrollTop() > $('.gallery').offset().top - 50) {
+        $('.nav li a').removeClass('active');
+        $('.nav li a#gallery').addClass('active');
+    }
+    if ($(document).scrollTop() > $('.get_in_touch').offset().top - 50) {
+        $('.nav li a').removeClass('active');
+        $('.nav li a#contact').addClass('active');
+    }
+    innernavscroll();
+}
+
 /* youtube popup */
 $(".fa-play-circle").grtyoutube({
     autoPlay: true
 });
 
 
-// function innernavscroll() {
-//     if ($(document).scrollTop() > $(".gallery").offset().top - 50) {
-//         $("nav ul li a").removeClass("active");
-//         $("nav ul li a#gallery").addClass("active");
-//     }
-// }
-$("nav ul li a#home").click(function() {
-    $("nav ul li a").removeClass("active");
-    $(this).addClass("active");
-});
-$("nav ul li a#classes").click(function() {
-    $("nav ul li a").removeClass("active");
-    $(this).addClass("active");
-});
-$("nav ul li a#trainers").click(function() {
-    $("nav ul li a").removeClass("active");
-    $(this).addClass("active");
-});
-$("nav ul li a#timetable").click(function() {
-    $("nav ul li a").removeClass("active");
-    $(this).addClass("active");
-});
-$("nav ul li a#services").click(function() {
-    $("nav ul li a").removeClass("active");
-    $(this).addClass("active");
-});
-$("nav ul li a#gallery").click(function() {
-    $("nav ul li a").removeClass("active");
-    $(this).addClass("active");
-});
-$("nav ul li a#contact").click(function() {
-    $("nav ul li a").removeClass("active");
-    $(this).addClass("active");
-});
+// $("nav ul li a#home").click(function() {
+//     $("nav ul li a").removeClass("active");
+//     $(this).addClass("active");
+// });
+// $("nav ul li a#classes").click(function() {
+//     $("nav ul li a").removeClass("active");
+//     $(this).addClass("active");
+// });
+// $("nav ul li a#trainers").click(function() {
+//     $("nav ul li a").removeClass("active");
+//     $(this).addClass("active");
+// });
+// $("nav ul li a#timetable").click(function() {
+//     $("nav ul li a").removeClass("active");
+//     $(this).addClass("active");
+// });
+// $("nav ul li a#services").click(function() {
+//     $("nav ul li a").removeClass("active");
+//     $(this).addClass("active");
+// });
+// $("nav ul li a#gallery").click(function() {
+//     $("nav ul li a").removeClass("active");
+//     $(this).addClass("active");
+// });
+// $("nav ul li a#contact").click(function() {
+//     $("nav ul li a").removeClass("active");
+//     $(this).addClass("active");
+// });
 
 if (screen.width < 767) {
     $("nav ul li a").click(function() {
