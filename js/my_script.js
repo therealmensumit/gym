@@ -9,32 +9,34 @@ $(window).scroll(function() {
 });
 
 function innernavscroll() {
-    if ($(document).scrollTop() > $('.banner-sec').offset().top - 50) {
-        $('.nav li a').removeClass('active');
-        $('.nav li a#home').addClass('active');
+    if ($(document).scrollTop() > $('.banner-sec').offset().top - 100) {
+        $('nav li a').removeClass('active');
+        $('#home').addClass('active');
     }
-    if ($(document).scrollTop() > $('.video-sec').offset().top - 50) {
-        $('.nav li a').removeClass('active');
-        $('.nav li a#classes').addClass('active');
+    if ($(document).scrollTop() > $('.video-sec').offset().top - 100) {
+        $('nav li a').removeClass('active');
+        $('#classes').addClass('active');
     }
-    if ($(document).scrollTop() > $('.trainer-sec').offset().top - 50) {
-        $('.nav li a').removeClass('active');
-        $('.nav li a#trainers').addClass('active');
+    if ($(document).scrollTop() > $('.trainer-sec').offset().top - 100) {
+        $('nav li a').removeClass('active');
+        $('#trainers').addClass('active');
     }
-    if ($(document).scrollTop() > $('.counter-sec').offset().top - 50) {
-        $('.nav li a').removeClass('active');
-        $('.nav li a#services').addClass('active');
+    if ($(document).scrollTop() > $('.counter-sec').offset().top - 100) {
+        $('nav li a').removeClass('active');
+        $('#services').addClass('active');
     }
-    if ($(document).scrollTop() > $('.gallery').offset().top - 50) {
-        $('.nav li a').removeClass('active');
-        $('.nav li a#gallery').addClass('active');
+    if ($(document).scrollTop() > $('.gallery').offset().top - 100) {
+        $('nav li a').removeClass('active');
+        $('#gallery').addClass('active');
     }
-    if ($(document).scrollTop() > $('.get_in_touch').offset().top - 50) {
-        $('.nav li a').removeClass('active');
-        $('.nav li a#contact').addClass('active');
+    if ($(document).scrollTop() > $('.get_in_touch').offset().top - 100) {
+        $('nav li a').removeClass('active');
+        $('#contact').addClass('active');
     }
-    innernavscroll();
 }
+$(window).scroll(function() {
+    innernavscroll();
+});
 
 /* youtube popup */
 $(".fa-play-circle").grtyoutube({
