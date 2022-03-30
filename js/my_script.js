@@ -92,7 +92,11 @@ $('.fix .cls i').click(function() {
 // hamburger
 $('.hamburger').click(function() {
     $(this).toggleClass('toggle');
-    $('header nav ul').toggle();
+    $('header nav ul').css('left', '0');
+});
+$('.hamburger.toggle').click(function() {
+    $(this).toggleClass('toggle');
+    $('header nav ul').css('left', '-400px');
 });
 
 

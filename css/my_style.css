@@ -155,8 +155,11 @@ header nav ul li a.active {
 } */
 
 .banner-sec {
-    height: calc(100% - 100px);
     margin-bottom: -4px;
+}
+
+.banner-sec .mySwiper {
+    height: calc(100% - 0px);
 }
 
 .banner-sec img.mob {
@@ -914,7 +917,7 @@ footer .copyr h5 span {
     .container {
         width: 90%;
     }
-    .banner-sec img {
+    .banner-sec .mySwiper {
         height: auto;
     }
     header {
@@ -927,10 +930,9 @@ footer .copyr h5 span {
         transition: .4s;
     }
     header nav ul {
-        display: none;
         position: fixed;
         top: 0;
-        left: 0;
+        left: -400px;
         width: 100%;
         height: 100vh;
         z-index: 3;
@@ -970,10 +972,10 @@ footer .copyr h5 span {
         padding: 30px 0;
     }
     .cardio-sec ul.row li figure {
-        width: 68px;
+        width: 50px;
     }
     .cardio-sec ul.row li figcaption h2 {
-        font-size: 18px;
+        font-size: 16px;
     }
     .why-sec {
         padding: 50px 0;
