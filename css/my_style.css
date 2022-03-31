@@ -159,7 +159,7 @@ header nav ul li a.active {
 }
 
 .banner-sec .mySwiper {
-    height: calc(100% - 0px);
+    height: calc(100vh - 0px);
 }
 
 .banner-sec img.mob {
@@ -911,14 +911,55 @@ footer .copyr h5 span {
 }
 
 
+/* Responsive tab */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        width: 940px;
+    }
+    .banner-sec .mySwiper {
+        height: auto;
+    }
+    .trainer-sec ul.trainee li .info {
+        padding: 18px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 720px;
+    }
+    .banner-sec .mySwiper {
+        height: auto;
+    }
+    .cardio-sec ul.row li figure {
+        width: 60px;
+    }
+    .cardio-sec ul.row li figcaption h2 {
+        font-size: 18px;
+    }
+    .trainer-sec ul.trainee li {
+        width: 44%;
+        margin: 3%;
+    }
+    .counter-sec .main ul.list li .cout,
+    .counter-sec .main ul.list li .word {
+        font-size: 22px;
+    }
+    .counter-sec .main ul.list li figure {
+        width: 75px;
+    }
+    .gallery ul.fance li {
+        width: 50%;
+    }
+}
+
+
 /* Responsive mobile */
 
 @media (max-width: 767px) {
     .container {
         width: 90%;
-    }
-    .banner-sec .mySwiper {
-        height: auto;
     }
     header {
         height: 65px;
@@ -957,6 +998,9 @@ footer .copyr h5 span {
     }
     .banner-sec {
         margin-bottom: -4px;
+    }
+    .banner-sec .mySwiper {
+        height: auto;
     }
     .banner-sec img.desk {
         display: none;
