@@ -913,6 +913,24 @@ footer .copyr h5 span {
 
 /* Responsive tab */
 
+@media (min-width: 1600px) and (max-width: 2600px) {
+    .container {
+        width: 1580px;
+    }
+    .banner-sec .mySwiper {
+        height: auto;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+    .container {
+        width: 1180px;
+    }
+    .banner-sec .mySwiper {
+        height: auto;
+    }
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
     .container {
         width: 940px;
