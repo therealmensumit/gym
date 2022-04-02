@@ -6,6 +6,7 @@ $(window).scroll(function() {
         $('.top').removeClass('affix');
         $("header").removeClass("fixed");
     }
+    innernavscroll();
 });
 
 function innernavscroll() {
@@ -34,51 +35,57 @@ function innernavscroll() {
         $('#contact').addClass('active');
     }
 }
-$(window).scroll(function() {
-    innernavscroll();
-});
+
 
 /* youtube popup */
 $(".fa-play-circle").grtyoutube({
     autoPlay: true
 });
 
+$('#home').click(function() {
+    $('html, body').animate({
+        scrollTop: $('body').offset().top
+    }, 1000)
+});
+$('#classes').click(function() {
+    $('html, body').animate({
+        scrollTop: $('.video-sec').offset().top - 90
+    }, 1000)
+});
+$('#trainers').click(function() {
+    $('html, body').animate({
+        scrollTop: $('.trainer-sec').offset().top - 90
+    }, 1000)
+});
+$('#services').click(function() {
+    $('html, body').animate({
+        scrollTop: $('.counter-sec').offset().top - 90
+    }, 1000)
+});
+$('#gallery').click(function() {
+    $('html, body').animate({
+        scrollTop: $('.gallery').offset().top - 90
+    }, 1000)
+});
+$('#contact').click(function() {
+    $('html, body').animate({
+        scrollTop: $('.get_in_touch').offset().top - 90
+    }, 1000)
+});
 
-// $("nav ul li a#home").click(function() {
-//     $("nav ul li a").removeClass("active");
-//     $(this).addClass("active");
-// });
-// $("nav ul li a#classes").click(function() {
-//     $("nav ul li a").removeClass("active");
-//     $(this).addClass("active");
-// });
-// $("nav ul li a#trainers").click(function() {
-//     $("nav ul li a").removeClass("active");
-//     $(this).addClass("active");
-// });
-// $("nav ul li a#timetable").click(function() {
-//     $("nav ul li a").removeClass("active");
-//     $(this).addClass("active");
-// });
-// $("nav ul li a#services").click(function() {
-//     $("nav ul li a").removeClass("active");
-//     $(this).addClass("active");
-// });
-// $("nav ul li a#gallery").click(function() {
-//     $("nav ul li a").removeClass("active");
-//     $(this).addClass("active");
-// });
-// $("nav ul li a#contact").click(function() {
-//     $("nav ul li a").removeClass("active");
-//     $(this).addClass("active");
-// });
+$('.top').click(function() {
+    $('html, body').animate({
+        scrollTop: $('body').offset().top
+    }, 2000)
+});
+
+
 
 if (screen.width < 767) {
     $("nav ul li a").click(function() {
-        $("nav ul li a").removeClass("active");
-        $(this).addClass("active");
-        $("ul").toggle();
-        // $("hamburger").toggleClass('toggle');
+        // $('nav ul').fadeOut();
+        $("hamburger").toggleClass('toggle');
+        $("nav ul").toggle();
     });
 }
 
@@ -96,7 +103,7 @@ $('.hamburger').click(function() {
     $(this).toggleClass('toggle');
     $('header nav ul').css('left', '0');
 });
-$('.hamburger.toggle').click(function() {
+$('.toggle').click(function() {
     $(this).toggleClass('toggle');
     $('header nav ul').css('left', '-400px');
 });

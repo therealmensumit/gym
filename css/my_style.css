@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 a {
@@ -104,6 +103,10 @@ header {
 header .logo {
     width: 200px;
     transition: 1s;
+    float: left;
+}
+
+header .logo a {
     float: left;
 }
 
@@ -710,11 +713,11 @@ header nav ul li a.active {
 
 .top {
     position: absolute;
-    bottom: 40px;
-    right: 40px;
-    border-radius: 50%;
-    transition: .4s;
+    bottom: 30px;
+    right: 30px;
     visibility: hidden;
+    border-radius: 50%;
+    /* transition: .4s; */
     background-color: #434343;
 }
 
