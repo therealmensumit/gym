@@ -157,6 +157,33 @@ header nav ul li a.active {
     height: 97px;
 } */
 
+.load {
+    font-size: 2rem;
+    display: grid;
+    place-content: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1c1c1c;
+    z-index: 9999999999999;
+    transition: all ease 2s;
+}
+
+.load.active {
+    top: 100%;
+}
+
+.load span {
+    display: block;
+    text-align: center;
+    color: #ffffff;
+}
+
+.load span img {
+    width: 250px;
+}
+
 .banner-sec {
     margin-bottom: -4px;
 }

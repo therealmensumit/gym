@@ -1,3 +1,6 @@
+$(window).load(function(){
+    $('.load').addClass('active');
+})
 $(window).scroll(function() {
     if ($(this).scrollTop() > 200) {
         $('.top').addClass('affix');
