@@ -82,17 +82,6 @@ $('.top').click(function() {
     }, 2000)
 });
 
-
-
-if (screen.width < 767) {
-    $("nav ul li a").click(function() {
-        // $('nav ul').fadeOut();
-        $("hamburger").toggleClass('toggle');
-        $("nav ul").toggle();
-    });
-}
-
-
 $('.btn a').click(function() {
     $('.fix').fadeIn(1000);
 });
@@ -104,12 +93,16 @@ $('.fix .cls i').click(function() {
 // hamburger
 $('.hamburger').click(function() {
     $(this).toggleClass('toggle');
-    $('header nav ul').css('left', '0');
+    $('nav ul').toggleClass('togglenav');
 });
-$('.toggle').click(function() {
-    $(this).toggleClass('toggle');
-    $('header nav ul').css('left', '-400px');
-});
+
+
+if (screen.width < 767) {
+    $("nav ul li a").click(function() {
+        $(".hamburger").toggleClass('toggle');
+        $('nav ul').fadeOut();
+    });
+}
 
 
 var swiper = new Swiper(".mySwiper", {
